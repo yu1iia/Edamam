@@ -1,1 +1,1 @@
-# Edamam
+# Recipe App

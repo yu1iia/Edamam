@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edamam</title>
     <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-    <form class="search-form">
-      <div>
-        <label for="searchQuery"></label>
-        <input
-          type="text"
-          class="form-control"
-          name="query"
-          id="searchQuery"
-          placeholder="Recipe search ..."
-          autocomplete="off"
-        />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h1 class="header">Recipe App</h1>
+
+        <form>
+          <input type="text" placeholder="Search Your Recipe..." />
+          <ion-icon name="search"></ion-icon>
+        </form>
+        <div class="search-result">
+          <div class="recipe">
+            <img src="./img/pancake.jpg" alt="" />
+            <div class="recipe__container">
+              <h2 class="recipe__title">Recipe title</h2>
+              <a href="" class="view-btn">View recipe</a>
+            </div>
+            <p class="recipe__data">Calories: 120</p>
+          </div>
+          <div class="recipe">
+            <img src="./img/pancake.jpg" alt="" />
+            <div class="recipe__container">
+              <h2 class="recipe__title">Recipe title</h2>
+              <a href="" class="view-btn">View recipe</a>
+            </div>
+            <p class="recipe__data">Calories: 120</p>
+          </div>
+          <div class="recipe">
+            <img src="./img/pancake.jpg" alt="" />
+            <div class="recipe__container">
+              <h2 class="recipe__title">Recipe title</h2>
+              <a href="" class="view-btn">View recipe</a>
+            </div>
+            <p class="recipe__data">Calories: 120</p>
+          </div>
+          <div class="recipe">
+            <img src="./img/pancake.jpg" alt="" />
+            <div class="recipe__container">
+              <h2 class="recipe__title">Recipe title</h2>
+              <a href="" class="view-btn">View recipe</a>
+            </div>
+            <p class="recipe__data">Calories: 120</p>
+          </div>
+        </div>
       </div>
-      <button type="submit" class="btn">Search</button>
-    </form>
-    <script src="js/script.js"></script>
-</body>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/js/script.js"></script>
+  </body>
 </html>

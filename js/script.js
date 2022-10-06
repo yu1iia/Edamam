@@ -12,13 +12,14 @@ searchForm.addEventListener('submit', e => {
 });
 
 async function fetchAPI() {
-  const baseUrl = `https://api.edamam.com/search?q=pizza&app_id=${APP_ID}&app_key=${APP_KEY}&to=20`;
+  const baseUrl = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&to=20`;
   const response = await fetch(baseUrl);
   const data = await response.json();
   generateHTML(data.hits);
   console.log(data);
 }
 function generateHTML(results) {
+  container.classList.remove('initial');
   let generatedHTML = '';
   results.map(result => {
     generatedHTML += `
@@ -26,11 +27,21 @@ function generateHTML(results) {
             <img src="${result.recipe.image}" alt="pizza image" />
             <div class="recipe__container">
               <h2 class="recipe__title">${result.recipe.label}</h2>
-              <a href="" class="view-btn">View recipe</a>
+              <a href="${
+                result.recipe.url
+              }" class="view-btn" target="blank">View recipe</a>
             </div>
             <p class="recipe__data">Calories: ${result.recipe.calories.toFixed(
               2,
             )}</p>
+            <p class="recipe__data">Diet label: ${
+              result.recipe.dietLabels.length > 0
+                ? result.recipe.dietLabels
+                : 'Data not found'
+            }</p>
+            <p class="recipe__data">Health label: ${
+              result.recipe.healthLabels
+            }</p>
           </div>
             `;
   });

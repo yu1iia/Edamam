@@ -110,3 +110,28 @@ form ion-icon {
   letter-spacing: 0.05rem;
   line-height: 2rem;
 }
+.container .initial .brand {
+  font-size: 7rem;
+}
+.container.initial form {
+  max-width: 880px;
+}
+.container.initial form input {
+  padding: 20px;
+  font-size: 3rem;
+}
+@media (max-width: 768px) {
+  .search-result {
+    grid-gap: 10px;
+  }
+  .container.initial .brand {
+    font-size: 4rem;
+  }
+  .container.initial form {
+    max-width: 500px;
+  }
+  .container.initial form input {
+    padding: 10px;
+    font-size: 2rem;
+  }
+} ;
